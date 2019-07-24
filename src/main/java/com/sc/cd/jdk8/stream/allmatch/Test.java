@@ -14,8 +14,11 @@ public class Test {
         List<String> strs = Arrays.asList("1", "", "2", "9", "", "3", "4", "2", "7", "", "9");
         boolean b = strs.stream().allMatch(str -> str.endsWith("2"));
         System.out.println(b);
-        strs = Arrays.asList("220", "120", "320");
+        strs = Arrays.asList("220", "120", "321");
         b = strs.stream().allMatch(str -> str.endsWith("20"));
         System.out.println(b);
+
+        boolean noneMatch = strs.stream().noneMatch(str -> str.endsWith("0"));
+        System.out.println(noneMatch);
     }
 }
