@@ -32,6 +32,10 @@ public class Demo {
                         .map(Insurance::getName).orElse("Unknown");
         System.out.println(name);
 
+        /*name = optPerson.map(Person::getCar)
+                        .map(Car::getInsurance)
+                        .map(Insurance::getName);*/
+        optPerson.filter(person1 -> person1.getCar().get() instanceof Car).get();
 
 
 
