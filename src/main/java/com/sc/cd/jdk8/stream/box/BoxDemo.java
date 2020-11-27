@@ -1,6 +1,8 @@
 package com.sc.cd.jdk8.stream.box;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
@@ -40,6 +42,9 @@ public class BoxDemo {
         howManyDishes = cats.stream().count();
 
 
+        ArrayList<Integer> integers = Lists.newArrayList(1, 2, 3);
+        ArrayList<Integer> integers1 = Lists.newArrayList(1,2,3);
+        System.out.println(Objects.equals(integers, integers1));
 
     }
 }
