@@ -1,5 +1,7 @@
 package com.sc.cd.juc;
 
+import jdk.nashorn.internal.ir.debug.ObjectSizeCalculator;
+
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -11,6 +13,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class Main {
     public static void main(String[] args) {
+
+        long objectSize = ObjectSizeCalculator.getObjectSize(new Main());
+        System.out.println(objectSize);
         int i = 0;
         System.out.println(i != (i =5));
 

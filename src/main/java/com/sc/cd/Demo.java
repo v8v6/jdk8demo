@@ -1,17 +1,18 @@
 package com.sc.cd;
 
+import com.sc.cd.util.DateTimeUtil;
+import org.apache.commons.lang3.time.DateUtils;
+import org.joda.time.DateTime;
+
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
-import org.apache.commons.lang3.time.DateUtils;
-import org.joda.time.DateTime;
-
-import com.sc.cd.util.DateTimeUtil;
-
 public class Demo {
     public static void main(String[] args) {
+
+        System.out.println((1<<16)-1);
 
         System.out.println(Objects.equals(1L,"1"));
         DecimalFormat df   =   new   DecimalFormat("###,##0.00");
